@@ -75,8 +75,7 @@ INSERT INTO categories (name, description, is_system_defined) VALUES
 ('Healthcare', 'Medical expenses and health insurance', TRUE),
 ('Education', 'Educational fees and supplies', TRUE),
 ('Salary', 'Income from salary (for tracking purposes)', TRUE),
-('Investments', 'Investment related expenses', TRUE)
-ON CONFLICT (name, is_system_defined) DO NOTHING;
+('Investments', 'Investment related expenses', TRUE);
 
 -- Create Payment Methods Table
 CREATE TABLE payment_methods (
@@ -97,8 +96,7 @@ INSERT INTO payment_methods (name, description, is_system_defined) VALUES
 ('Debit Card', 'Payments made via debit card', TRUE),
 ('Cash', 'Cash payments', TRUE),
 ('Bank Transfer', 'Payments made via direct bank transfer', TRUE),
-('PayPal', 'Payments made via PayPal', TRUE)
-ON CONFLICT (name, is_system_defined) DO NOTHING;
+('PayPal', 'Payments made via PayPal', TRUE);
 
 -- Create Merchants Table
 CREATE TABLE merchants (
